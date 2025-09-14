@@ -1,6 +1,6 @@
-import { neon } from '@netlify/neon';
+import { neon } from '@neondatabase/serverless';
 
-const sql = neon(); // Uses NETLIFY_DATABASE_URL env variable
+const sql = neon(process.env.REACT_APP_DATABASE_URL);
 
 export const db = {
   // User progress tracking
